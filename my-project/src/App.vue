@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <h1>Gem TD</h1>
+    <div id="nav">
+      <router-link v-bind:to="'/'" class="btn btn-default">Home</router-link>
+      <router-link v-bind:to="'/NormalLevel'" class="btn btn-default">Normal</router-link>
+    </div>
+    
     <router-view/>
   </div>
 </template>
@@ -18,6 +23,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 </style>

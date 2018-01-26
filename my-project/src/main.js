@@ -2,14 +2,28 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false
+
+Vue.use(VueRouter)
+import Home from './components/Home'
+import Normal from './components/NormalLevel'
+
+const routes = [
+  { path: '/', component: Home },
+  { path: '/NormalLevel', component: Normal },
+]
+
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  template: '<App/>',
   components: { App },
-  template: '<App/>'
-})
+  router
+}).$mount('#app')
