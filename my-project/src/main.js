@@ -8,11 +8,13 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter)
 import Home from './components/Home'
-import Normal from './components/NormalLevel'
+import Instructions from './components/Instructions'
+import Updates from './components/Updates'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/NormalLevel', component: Normal },
+  { path: '/Instructions', component: Instructions },
+  { path: '/Updates', component: Updates },
 ]
 
 const router = new VueRouter({

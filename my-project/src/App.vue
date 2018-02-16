@@ -3,7 +3,9 @@
     <h1>Gem TD</h1>
     <div id="nav">
       <router-link v-bind:to="'/'" class="btn btn-default">Home</router-link>
-      <router-link v-bind:to="'/NormalLevel'" class="btn btn-default">Normal</router-link>
+      <router-link v-bind:to="'/Instructions'" class="btn btn-default">Instructions</router-link>
+      <router-link v-bind:to="'/Updates'" class="btn btn-default">Updates</router-link>
+      
     </div>
     
     <router-view/>
